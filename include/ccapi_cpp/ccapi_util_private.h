@@ -1,6 +1,5 @@
 #ifndef INCLUDE_CCAPI_CPP_CCAPI_UTIL_PRIVATE_H_
 #define INCLUDE_CCAPI_CPP_CCAPI_UTIL_PRIVATE_H_
-#include <unistd.h>
 
 #include <algorithm>
 #include <array>
