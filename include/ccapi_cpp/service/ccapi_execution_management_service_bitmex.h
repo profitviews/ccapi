@@ -291,7 +291,7 @@ class ExecutionManagementServiceBitmex : public ExecutionManagementService {
     auto signature = Hmac::hmac(Hmac::ShaVersion::SHA256, apiSecret, preSignedText, true);
     rj::Value args(rj::kArrayType);
     args.PushBack(rj::Value(apiKey.c_str(), allocator).Move(), allocator);
-    args.PushBack(rj::Value(expires).Move(), allocator);
+    args.PushBack(rj::Value(static_cast<std::int64_t>(expires)).Move(), allocator);
     args.PushBack(rj::Value(signature.c_str(), allocator).Move(), allocator);
     document.AddMember("args", args, allocator);
     rj::StringBuffer stringBuffer;
